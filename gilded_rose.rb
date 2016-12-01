@@ -11,6 +11,7 @@ class GildedRose
         case item.name
         when "Aged Brie" then update_aged_brie(item)
         when "Backstage passes to a TAFKAL80ETC concert" then update_passes(item)
+        when "Conjured" then update_conjured(item)
         else update_normal_items(item)
         end
         item.sell_in -= 1 if item.name
@@ -26,6 +27,10 @@ class GildedRose
 
   def update_aged_brie(item)
     item.quality += 1
+  end
+
+  def update_conjured(item)
+    item.quality -= 2
   end
 
   def update_passes(item)
