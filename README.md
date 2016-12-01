@@ -2,7 +2,7 @@
 
 A kata challenge to refactor messy code.
 
-## Structure
+## Structure
 
 A main file called "gilded_rose.rb" and a spec file for testing.
 
