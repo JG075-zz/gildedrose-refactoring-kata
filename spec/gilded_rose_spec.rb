@@ -69,6 +69,13 @@ describe GildedRose do
       expect(gildedRose.items[0].sell_in).to eq 1
     end
 
+    it "increase the quality of ETC backstage passes by 1" do
+      items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 11, 1)]
+      gildedRose = GildedRose.new(items)
+      gildedRose.update_quality
+      expect(gildedRose.items[0].quality).to eq 2
+    end
+
     it "increase the quality of ETC backstage passes by 2" do
       items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 8, 1)]
       gildedRose = GildedRose.new(items)
@@ -89,7 +96,6 @@ describe GildedRose do
       gildedRose.update_quality
       expect(gildedRose.items[0].quality).to eq 0
     end
-
 
   end
 
